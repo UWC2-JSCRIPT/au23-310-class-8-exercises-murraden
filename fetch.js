@@ -20,7 +20,7 @@ const booksURL = `https://api.nytimes.com/svc/books/v3/lists/${date}/${list}.jso
   } catch (err) {
     console.log(err)
   }
-} */
+} *///
 
 
 fetch(booksURL)
