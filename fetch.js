@@ -1,7 +1,7 @@
 // create api-key.js file with const API_KEY="your_api_key" in this same directory to use
 //const BASE_URL = 'https://api.nytimes.com/svc/search/v2/articlesearch.json';
 
-const API_KEY = 'LlsFqCHJDASo4ecWdF0MgASzPdqbEzZ1'
+//const API_KEY = 'LlsFqCHJDASo4ecWdF0MgASzPdqbEzZ1'
 const date = '2022-03-12'
 const list = 'hardcover-fiction'
 const booksURL = `https://api.nytimes.com/svc/books/v3/lists/${date}/${list}.json?api-key=${API_KEY}`
@@ -30,7 +30,7 @@ fetch(booksURL)
   .then(function(responseJson) {
     console.log(responseJson);
 
-    let article = responseJson.response.docs[0];
+    let article = responseJson.results.books[0];
     console.log(article);
 
     const mainHeadline = article.headline.main;
